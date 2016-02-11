@@ -24,9 +24,10 @@ app.use(bodyParser.json());
 // ---------------------------------------------------------
 var router = express.Router();
 
-router.route('/users')
-  .post(userController.postUsers)
-  .get(userController.coba);
+router.route('/user/signup')
+  .post(userController.registerUser);
+router.route('/user/signin')
+  .post(userController.login);
 
 app.use('/api', router);
 

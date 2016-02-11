@@ -5,5 +5,6 @@ var Schema = mongoose.Schema;
 module.exports = mongoose.model('User', new Schema({ 
 	email: String, 
 	password: String,
-	token:String
+	token:String,
+	todos: [{ item: String, date: Date }]
 }));

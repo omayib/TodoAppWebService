@@ -28,6 +28,12 @@ router.route('/user/signup')
   .post(userController.registerUser);
 router.route('/user/signin')
   .post(userController.login);
+router.route('/todo')
+  .post(userController.insertItemTodo)
+  .get(userController.getTodos);
+router.route('/todo/:todo_id')
+ 	.put(userController.updateItemTodo)
+ 	.delete(userController.deleteItemTodo);
 
 app.use('/api', router);
 
